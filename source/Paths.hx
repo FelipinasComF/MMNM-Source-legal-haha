@@ -20,7 +20,11 @@ import sys.FileSystem;
 import flixel.graphics.FlxGraphic;
 import openfl.display.BitmapData;
 
+#if !macro
 import flash.media.Sound;
+#end
+
+import openfl.media.Sound;
 
 using StringTools;
 
