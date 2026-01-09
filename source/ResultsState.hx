@@ -12,7 +12,7 @@ import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.text.FlxText;
-
+import flixel.util.FlxAxes;
 // Coded by Ighby
 class ResultsState extends MusicBeatState
 {
@@ -53,7 +53,7 @@ class ResultsState extends MusicBeatState
             // It's basically just to prevent a crash
             statsList.push(new SongStats('Familiar', 69420, 0, 100, 'SFC', 'fh'));
 
-		bg = new FlxBackdrop(Paths.image(path + 'bg_pattern', 'preload'), 1, 1, true, true);
+		bg = new FlxBackdrop(Paths.image(path + 'bg_pattern', 'preload'), FlxAxes.XY);
 		bg.scrollFactor.set();
 		bg.antialiasing = false;
         bg.velocity.set(-40, -40);

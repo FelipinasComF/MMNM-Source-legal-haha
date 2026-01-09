@@ -20,6 +20,7 @@ import lime.utils.Assets;
 import flixel.system.FlxSound;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.addons.display.FlxBackdrop;
+import flixel.util.FlxAxes;
 #if MODS_ALLOWED
 import sys.FileSystem;
 #end
@@ -129,7 +130,7 @@ class AllStarsState extends MusicBeatState
 		}
 		WeekData.loadTheFirstEnabledMod();
 
-		bg = new FlxBackdrop(Paths.image(path + 'loopingback', 'preload'), 1, 1, true, true);
+		bg = new FlxBackdrop(Paths.image(path + 'loopingback', 'preload'), flixel.util.FlxAxes.XY);
 		bg.scrollFactor.set();
 		bg.antialiasing = false;
 		add(bg);

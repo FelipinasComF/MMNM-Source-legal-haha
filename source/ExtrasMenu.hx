@@ -55,7 +55,7 @@ import openfl.events.KeyboardEvent;
 import flixel.util.FlxSave;
 import Achievements;
 import flixel.addons.display.FlxBackdrop;
-
+import flixel.util.FlxAxes;
 class ExtrasMenu extends MusicBeatState
 {
     static var path:String = 'extrasmenu/';
@@ -71,7 +71,7 @@ class ExtrasMenu extends MusicBeatState
     {
         optionSprites = new FlxSpriteGroup();
 
-        bg = new FlxBackdrop(Paths.image('allstars/loopingback','preload'), 1, 1, true, true);
+        bg = new FlxBackdrop(Paths.image('allstars/loopingback','preload'), FlxAxes.XY);
         bg.scrollFactor.set();
         bg.antialiasing = false;
         add(bg);
