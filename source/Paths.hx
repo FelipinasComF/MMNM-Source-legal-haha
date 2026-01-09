@@ -241,24 +241,29 @@ class Paths
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
 		#if MODS_ALLOWED
+<<<<<<< HEAD
 		if (!ignoreMods && FileSystem.exists(modFolders(key)))
 			return File.getContent(modFolders(key));
+=======
+        if (!ignoreMods && FileSystem.exists(modFolders(key)))
+            return File.getContent(modFolders(key));
+>>>>>>> 00e0dc2821cca004778084fbad5f3dd5b133bac9
 
-		if (FileSystem.exists(getPreloadPath(key)))
-			return File.getContent(getPreloadPath(key));
+        if (FileSystem.exists(getPreloadPath(key)))
+            return File.getContent(getPreloadPath(key));
 
-		if (currentLevel != null)
-		{
-			var levelPath:String = '';
-			if(currentLevel != 'shared') {
-				levelPath = getLibraryPathForce(key, currentLevel);
-				if (FileSystem.exists(levelPath))
-					return File.getContent(levelPath);
-			}
+        if (currentLevel != null)
+        {
+            var levelPath:String = '';
+            if(currentLevel != 'shared') {
+                levelPath = getLibraryPathForce(key, currentLevel);
+                if (FileSystem.exists(levelPath))
+                    return File.getContent(levelPath);
+            }
 
-			levelPath = getLibraryPathForce(key, 'shared');
-			if (FileSystem.exists(levelPath))
-				return File.getContent(levelPath);
+            levelPath = getLibraryPathForce(key, 'shared');
+            if (FileSystem.exists(levelPath))
+                return File.getContent(levelPath);
 		}
 		#end
 		return Assets.getText(getPath(key, TEXT));
