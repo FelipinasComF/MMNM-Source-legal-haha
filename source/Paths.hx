@@ -241,13 +241,8 @@ class Paths
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
 		#if MODS_ALLOWED
-<<<<<<< HEAD
 		if (!ignoreMods && FileSystem.exists(modFolders(key)))
 			return File.getContent(modFolders(key));
-=======
-        if (!ignoreMods && FileSystem.exists(modFolders(key)))
-            return File.getContent(modFolders(key));
->>>>>>> 00e0dc2821cca004778084fbad5f3dd5b133bac9
 
         if (FileSystem.exists(getPreloadPath(key)))
             return File.getContent(getPreloadPath(key));
